@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Music View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="MusicViewController" id="vXZ-lx-hvc" customClass="MusicViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Du9-hX-9V4"/>
+                        <viewControllerLayoutGuide type="bottom" id="FwV-ag-wbY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jdL-7e-OAF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqk-tw-PFN">
+                                <rect key="frame" x="0.0" y="235" width="320" height="99"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VP-pO-EjJ" customClass="AudioButton">
+                                        <rect key="frame" x="128" y="18" width="65" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="D4i-WM-kOM"/>
+                                            <constraint firstAttribute="width" constant="65" id="a8U-rd-jpm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickPlay:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7sQ-nq-9hU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3VP-pO-EjJ" secondAttribute="bottom" constant="17" id="dnn-Z5-A10"/>
+                                    <constraint firstItem="3VP-pO-EjJ" firstAttribute="centerX" secondItem="oqk-tw-PFN" secondAttribute="centerX" id="mMM-Gv-Ffg"/>
+                                    <constraint firstItem="3VP-pO-EjJ" firstAttribute="top" secondItem="oqk-tw-PFN" secondAttribute="top" constant="18" id="sCE-Z6-8B6"/>
+                                </constraints>
+                            </view>
+                            <button alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQj-DN-crz">
+                                <rect key="frame" x="228" y="168" width="76" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="GSS-Mm-Vtj"/>
+                                </constraints>
+                                <state key="normal" title="返回">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickBack:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="reh-yR-y86"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jdL-7e-OAF" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="1QA-E0-dVU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oqk-tw-PFN" secondAttribute="trailing" constant="-16" id="3KJ-GU-PGY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jdL-7e-OAF" secondAttribute="trailing" constant="-16" id="9nq-wf-MvM"/>
+                            <constraint firstItem="zQj-DN-crz" firstAttribute="top" secondItem="Du9-hX-9V4" secondAttribute="bottom" constant="148" id="AgH-wT-GZF"/>
+                            <constraint firstItem="oqk-tw-PFN" firstAttribute="top" secondItem="Du9-hX-9V4" secondAttribute="bottom" constant="215" id="CSO-B5-xOt"/>
+                            <constraint firstItem="jdL-7e-OAF" firstAttribute="bottom" secondItem="FwV-ag-wbY" secondAttribute="top" id="IZ2-F1-hah"/>
+                            <constraint firstItem="oqk-tw-PFN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Z62-th-6q5"/>
+                            <constraint firstItem="oqk-tw-PFN" firstAttribute="top" secondItem="zQj-DN-crz" secondAttribute="bottom" constant="37" id="d3N-cT-NL4"/>
+                            <constraint firstItem="jdL-7e-OAF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="gYj-nr-cdG"/>
+                            <constraint firstItem="zQj-DN-crz" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="vyE-1H-kFd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="3VP-pO-EjJ" id="EYg-tN-hQ3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundImage5.jpg" width="480" height="800"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
